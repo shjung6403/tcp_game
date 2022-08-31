@@ -1,0 +1,19 @@
+Sam Jung
+CSCI 367
+Prof. Tsikerdekis
+Programming Assignment2: Lexithesaurus
+
+Due to time restriction, I could not implement all the features that could have improved the quality of the code. This includes checking
+user input in a more strict way. For example if the user inputs an invalid string, I would want to detect it and have them make another
+guess. I had some problems with string comparisons and storing/updating values of string arrays. I was not recieving the expected
+values from the client to the server and had to take different approaches. First of all I tried to trim the leading zeros (\0). This was
+useful when I was parsing the .txt file but did not solve our issue. 
+In order to debug our code, I made a test file to try out each functions in different scenarios. It was extremely helpful when dealing
+with subtle details such as pointers and addresses. I figured that the issue was the mismatch of datatype. When sending, I was to use
+unsigned integers, however I passed a regular integer variable instead. Matching both variables to unsigned integers solved this issue. 
+One of the biggest challenges I faced was refreshing memories of c headers and dealing with global variables. Since I was most
+comfortable with java, sometimes the c format seemed counterintuitive. That is why I decided not to implement it. Another challenge I
+faced was sending/recieving the correct string between the server and the clients. It took a a tremendous amount of time to debug this
+issue. In terms of tracking the "unexpected" disconnection, it was a little confusing. I was unable to detect ungraceful
+disconnections(ctrl+z) but was able to detect the graceful ones(ctrl+c) and successfully close the sockets.
+
